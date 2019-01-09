@@ -4,7 +4,10 @@ import pickle
 import os
 import numpy as np
 
-BASE_DIR = "image_files"
+BASE_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+    "image_files"
+)
 
 
 def load_cifar10(num_batches=5,
